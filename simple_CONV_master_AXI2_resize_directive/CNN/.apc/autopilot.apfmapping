@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="CNN.cpp" path="C:\Users\Sharif\Desktop\simple_CONV_master_AXI2_resize_directive\source\CNN.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="test_CONV_LAYER1.cpp" path="C:\Users\Sharif\Desktop\simple_CONV_master_AXI2_resize_directive\source\test_CONV_LAYER1.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

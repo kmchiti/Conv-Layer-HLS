@@ -1,0 +1,117 @@
+INFO: [HLS 200-10] Running 'D:/Vivado/2018.3/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'Sharif' on host 'desktop-qi4m24e' (Windows NT_amd64 version 6.2) on Tue Apr 02 18:04:51 +0430 2019
+INFO: [HLS 200-10] In directory 'C:/Users/Sharif/Desktop/simple_CONV_master_AXI2_resize_directive'
+INFO: [HLS 200-10] Opening project 'C:/Users/Sharif/Desktop/simple_CONV_master_AXI2_resize_directive/CNN'.
+INFO: [HLS 200-10] Adding design file 'source/CNN.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'source/test_CONV_LAYER1.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/Sharif/Desktop/simple_CONV_master_AXI2_resize_directive/CNN/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'source/CNN.cpp' ... 
+WARNING: [HLS 200-40] In file included from source/CNN.cpp:1:
+In file included from source/CONV.h:5:
+D:/Vivado/2018.3/common/technology/autopilot\ap_cint.h:59:2: warning: This header file cannot be used in a C++ design. C-synthesis will fail.  [-W#warnings]
+#warning This header file cannot be used in a C++ design. C-synthesis will fail. 
+ ^
+1 warning generated.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 104.570 ; gain = 18.590
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 104.570 ; gain = 18.590
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'relu' into 'CONV' (source/CNN.cpp:68).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 114.703 ; gain = 28.723
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'acc' into 'CNN' (source/CNN.cpp:179) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:30 ; elapsed = 00:01:47 . Memory (MB): peak = 161.512 ; gain = 75.531
+INFO: [XFORM 203-602] Inlining function 'acc' into 'CNN' automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (source/CNN.cpp:52:31) to (source/CNN.cpp:52:25) in function 'CONV'... converting 3 basic blocks.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:02:57 ; elapsed = 00:03:14 . Memory (MB): peak = 168.488 ; gain = 82.508
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (source/CNN.cpp:28:6) in function 'CONV'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-2' (source/CNN.cpp:37:7) in function 'CONV'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-3.1.1' (source/CNN.cpp:51:9) in function 'CONV'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-3.1' (source/CNN.cpp:50:7) in function 'CONV'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-3' (source/CNN.cpp:49:6) in function 'CONV'.
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'CNN_label1' (source/CNN.cpp:159:32) in function 'CNN' : 
+
+more than one sub loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'CNN_label0' (source/CNN.cpp:158:30) in function 'CNN'.
+WARNING: [XFORM 203-561] 'Loop-4' (source/CNN.cpp:131:18) in function 'CNN' is an infinite loop.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 10000 on port 'img_port' (source/CNN.cpp:163:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 10000 on port 'img_port' (source/CNN.cpp:172:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst read of a total cumulative length 9604 on port 'img_port' (source/CNN.cpp:174:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-444] Inferring multiple bus burst write of a total cumulative length 9604 on port 'img_port' (source/CNN.cpp:167:5). These data requests might be further partitioned to multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:02:59 ; elapsed = 00:03:16 . Memory (MB): peak = 168.488 ; gain = 82.508
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'CNN' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'CONV' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 4'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 196.41 seconds; current allocated memory: 119.549 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.148 seconds; current allocated memory: 120.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'CNN' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'memcpy..img_port'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy.img_port.'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy..img_port'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-61] Pipelining loop 'memcpy..img_port'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.286 seconds; current allocated memory: 120.832 MB.
+INFO: [HLS 200-434] Only 4 loops out of a total 6 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buff_input_img' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.221 seconds; current allocated memory: 121.440 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'CONV' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'CNN_mac_muladd_7ns_8ns_7ns_14_1_1' to 'CNN_mac_muladd_7nbkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'CNN_mac_muladd_7nbkb': 3 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'CONV'.
+INFO: [HLS 200-111]  Elapsed time: 0.278 seconds; current allocated memory: 122.999 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'CNN' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/img_port' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/kernel' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'CNN/bias' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'CNN' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'CNN_mac_muladd_15ns_4ns_16ns_17_1_1' to 'CNN_mac_muladd_15cud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'CNN_mac_muladd_4ns_15ns_16ns_17_1_1' to 'CNN_mac_muladd_4ndEe' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'CNN_mac_muladd_15cud': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'CNN_mac_muladd_4ndEe': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'CNN'.
+INFO: [HLS 200-111]  Elapsed time: 0.716 seconds; current allocated memory: 125.040 MB.
+INFO: [RTMG 210-278] Implementing memory 'CONV_IBRAM_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'CONV_OBRAM_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'CONV_WBRAM_ram (RAM)' using distributed RAMs.
+INFO: [RTMG 210-278] Implementing memory 'CNN_buff_input_img_ram (RAM_2P_BRAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'CNN_buff_output_img_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:03:02 ; elapsed = 00:03:20 . Memory (MB): peak = 186.414 ; gain = 100.434
+INFO: [SYSC 207-301] Generating SystemC RTL for CNN.
+INFO: [VHDL 208-304] Generating VHDL RTL for CNN.
+INFO: [VLOG 209-307] Generating Verilog RTL for CNN.
+INFO: [HLS 200-112] Total elapsed time: 200.201 seconds; peak allocated memory: 125.040 MB.

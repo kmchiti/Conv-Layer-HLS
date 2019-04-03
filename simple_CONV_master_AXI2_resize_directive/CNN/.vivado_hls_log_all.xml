@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [BIND 205-102] The specified resource core for memory 'buff_input_img' will be ignored if a simpler one can be used." projectName="CNN" solutionName="solution1" date="2019-04-02T18:08:08.512+0430" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-561] 'Loop-4' (source/CNN.cpp:131:18) in function 'CNN' is an infinite loop." projectName="CNN" solutionName="solution1" date="2019-04-02T18:08:07.636+0430" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-542] Cannot flatten a loop nest 'CNN_label1' (source/CNN.cpp:159:32) in function 'CNN' : &#xD;&#xA;&#xD;&#xA;more than one sub loop." projectName="CNN" solutionName="solution1" date="2019-04-02T18:08:05.907+0430" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] In file included from source/CNN.cpp:1:&#xD;&#xA;In file included from source/CONV.h:5:&#xD;&#xA;D:/Vivado/2018.3/common/technology/autopilot\ap_cint.h:59:2: warning: This header file cannot be used in a C++ design. C-synthesis will fail.  [-W#warnings]&#xD;&#xA;#warning This header file cannot be used in a C++ design. C-synthesis will fail. &#xD;&#xA; ^&#xD;&#xA;1 warning generated." projectName="CNN" solutionName="solution1" date="2019-04-02T18:04:57.729+0430" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>
